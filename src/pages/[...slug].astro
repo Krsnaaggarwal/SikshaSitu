@@ -1,6 +1,24 @@
 ---
-import { Head } from "@/Head";
+import Head from "@/Head.astro";
 import "@/styles/global.css";
+
+export async function getStaticPaths() {
+  // Provide a set of known static routes for the catch-all page so
+  // the static build can generate them. For deeper nested routes
+  // you can add arrays of segments, e.g. ['section','item'].
+  const routes = [
+    "assessments",
+    "courses",
+    "colleges",
+    "jobs",
+    "profile",
+    "email-templates",
+  ];
+
+  // Return slug as a string per-route so static generation produces
+  // paths like /assessments, /courses, etc.
+  return routes.map((r) => ({ params: { slug: r } }));
+}
 ---
 
 <html lang="en" class="w-full h-full scroll-smooth">
