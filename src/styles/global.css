@@ -1,0 +1,63 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for proper rendering */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'azeret-mono', monospace;
+    background-color: #EAEAEA;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Ensure proper font loading */
+  .font-heading {
+    font-family: 'space grotesk', sans-serif;
+  }
+  
+  .font-paragraph {
+    font-family: 'azeret-mono', monospace;
+  }
+}
+
+/* Fix any potential layout issues */
+@layer components {
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+/* Utilities for better rendering */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  /* Horizontal scrolling animation for career banner */
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
