@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "module": "esnext",
+    "esModuleInterop": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
+  "moduleResolution": "node",
+  "lib": ["DOM", "ESNext"],
+  "types": ["node", "react"],
     "rootDir": ".",
     "baseUrl": ".",
     "noUnusedLocals": false,

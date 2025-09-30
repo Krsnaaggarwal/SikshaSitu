@@ -1,4 +1,5 @@
 
+/**
  * Collection ID: governmentportals
  * Interface for GovernmentPortals
  */
@@ -13,7 +14,7 @@ export interface GovernmentPortals {
   /** @wixFieldType url */
   portalLink?: string;
   /** @wixFieldType text */
-  foc/**usArea?: string;
+  focusArea?: string;
   /** @wixFieldType text */
   targetAudience?: string;
   /** @wixFieldType image */
