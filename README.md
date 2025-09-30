@@ -20,3 +20,7 @@ How to restore full functionality (if you have access to Wix registry):
 4. Run `npm run build` (or `wix build` if you prefer Wix CLI).
 
 If you want me to try to fully restore the original interactive site here, share access details for the private registry OR tell me to attempt to vendor or stub the missing packages (the latter is more work and may still diverge from the original site).
+
+Note about Vercel builds:
+- I added a root `.npmrc` with `legacy-peer-deps=true` so Vercel's `npm install` uses legacy peer dependency resolution which avoids ERESOLVE failures during CI.
+- I pinned `@tailwindcss/vite` to `4.0.13` for compatibility with Vite 4 used in this project. If you upgrade Vite to v5+, update `@tailwindcss/vite` accordingly.
